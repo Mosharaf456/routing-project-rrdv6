@@ -8,11 +8,13 @@ import BookLayout from './BookLayout';
 function BookRoutes() {
   return (
     <>
-        <BookLayout />
         <Routes>
-            <Route index element={<BookList />} />
-            <Route path=':bookId' element={<Book />} />
-            <Route path='new' element={<NewBook />} />
+            <Route element={<BookLayout />} > 
+                <Route index element={<BookList />} />
+                <Route path=':bookId' element={<Book />} />
+                <Route path='new' element={<NewBook />} />
+            </Route>
+
         </Routes>
     </>
   )
