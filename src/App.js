@@ -12,6 +12,8 @@ import BookLayout from './components/BookLayout';
 import Home from './components/Home';
 import BookRoutes from './components/BookRoutes';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import PrivateOutlet from './components/PrivateOutlet/PrivateOutlet';
+import Dashboard from './components/Dashboard';
 
 
 function App() {
@@ -43,15 +45,18 @@ function App() {
           <li>
             {/* Link property replace which erase the back navigation to logged in to login page*/}
               {/* <Link to='/home'>Home</Link> */}
-              <NavLink to='/home' state='Hi Home Page'> 
-                Home 
-              </NavLink>
+            <NavLink to='/home' state='Hi Home Page'> 
+              Home 
+            </NavLink>
           </li>
           <li>
-              <Link to='/books'>Books</Link>
+            <Link to='/dashboard'>Dashboard</Link>
           </li>
           <li>
-              <Link to='/login'>Login</Link>
+            <Link to='/books'>Books</Link>
+          </li>
+          <li>
+            <Link to='/login'>Login</Link>
           </li>
         </ul>
       </nav>
@@ -62,17 +67,25 @@ function App() {
 
       <Routes>
 
-        <Route path='/' element={<Home />} />
-        <Route 
+
+        {/* <Route 
             path='/books/*' 
             element={ 
               <PrivateRoute> 
                 <BookRoutes /> 
               </PrivateRoute>
             } 
-          />
-        <Route path='/login' element={<Login />} />
+          /> */}
+        <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+
+        <Route path='/books/*' element={<BookRoutes />} />
+    
+        <Route path='/*' element={<PrivateOutlet />}>
+          <Route path='dashboard' element={<Dashboard />} />
+        </Route>
+     
         <Route path='*' element={<NotFound />} />
       </Routes>
     </>
