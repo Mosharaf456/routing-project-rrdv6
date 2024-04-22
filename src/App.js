@@ -4,6 +4,7 @@ import BookList from './components/BookList';
 import NewBook from './components/NewBook';
 import { lazy } from 'react';
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
+import NotFound from './components/NotFound';
 
 const Home = lazy(() => import('./components/Home'));
 function App() {
@@ -30,7 +31,7 @@ function App() {
         <Route path='/books/:bookId' element={<Book />} />
         <Route path='/books/new' element={<NewBook />} />
 
-        <Route path='*' element={<h1>Not Found</h1>} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </>
   );
