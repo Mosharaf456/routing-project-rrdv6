@@ -11,6 +11,7 @@ import BookLayout from './components/BookLayout';
 // const Home = lazy(() => import('./components/Home'));
 import Home from './components/Home';
 import BookRoutes from './components/BookRoutes';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
           <li>
             {/* Link property replace which erase the back navigation to logged in to login page*/}
               {/* <Link to='/home'>Home</Link> */}
-              <NavLink to='/home' state='Hi'> 
+              <NavLink to='/home' state='Hi Home Page'> 
                 Home 
               </NavLink>
           </li>
@@ -56,19 +57,22 @@ function App() {
       </nav>
 
         {/* {element} */}
-        {JSON.stringify(location.state)}
+         {(location.state !== null)? JSON.stringify(location.state) : ''}
+    
 
       <Routes>
 
         <Route path='/' element={<Home />} />
-        <Route path='/books/*' element={<BookRoutes />} /> {/* Nested routes , router outlet used */}
+        <Route 
+            path='/books/*' 
+            element={ 
+              <PrivateRoute> 
+                <BookRoutes /> 
+              </PrivateRoute>
+            } 
+          />
         <Route path='/login' element={<Login />} />
         <Route path='/home' element={<Home />} />
- 
-        {/* <Route path='/books' element={<BookList />} />
-        <Route path='/books/:bookId' element={<Book />} />
-        <Route path='/books/new' element={<NewBook />} /> */}
-
         <Route path='*' element={<NotFound />} />
       </Routes>
     </>
