@@ -10,11 +10,16 @@ import BookLayout from './components/BookLayout';
 
 // const Home = lazy(() => import('./components/Home'));
 import Home from './components/Home';
+import BookRoutes from './components/BookRoutes';
 
 
 function App() {
   return (
     <>
+    {/* location fixed this conetnt on all over the route */}
+      <Routes location='/books'>
+        <Route path='/books' element={<h1>Extra Content</h1>} />
+      </Routes>
       <nav style={{textAlign: 'center'}}>
         <ul style={{display: 'flex' , justifyContent: 'space-around' }}>
           <li>
@@ -31,11 +36,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
 
-        <Route path='/books' element={<BookLayout />}>
-          <Route index element={<BookList />} />
-          <Route path=':bookId' element={<Book />} />
-          <Route path='new' element={<NewBook />} />
-        </Route>
+        <Route path='/books/*' element={<BookRoutes />} />
+          
 
         <Route path='/login' element={<Login />} />
 
