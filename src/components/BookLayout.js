@@ -1,7 +1,9 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, Outlet, useSearchParams } from 'react-router-dom';
 
 function BookLayout() {
+  const [searchParam, setSearchParam] = useSearchParams({ n: 3});
+  const number = searchParam.get("n");
     return (
       <>
         <Link to='/books/1'>Book 1</Link>
@@ -9,9 +11,11 @@ function BookLayout() {
         <br />
         <Link to='/books/2'>Book 2</Link>
         <br /> 
+        <Link to={`/books/${number}`}>Book {number}</Link>
+        <br /> 
         <Link to='/books/new'>New Book</Link>
         <Outlet context={{ hello: 'World' }} />
-        
+        <input type='text' value={number} onChange={ e => setSearchParam({n: e.target.value})} />
       </>
     )
 }

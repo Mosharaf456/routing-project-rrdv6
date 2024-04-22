@@ -4,7 +4,7 @@ import Login from './components/Login';
 import Book from './components/Book';
 import BookList from './components/BookList';
 import NewBook from './components/NewBook';
-import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Routes, Route, useRoutes, NavLink, useLocation } from 'react-router-dom';
 import NotFound from './components/NotFound';
 import BookLayout from './components/BookLayout';
 
@@ -14,6 +14,23 @@ import BookRoutes from './components/BookRoutes';
 
 
 function App() {
+  // const element = useRoutes([
+  //   {
+  //     path: '/',
+  //     element: <Home />
+  //   },
+  //   {
+  //     path: 'login',
+  //     element: <Login />
+  //   },
+  //   {
+  //     path: '/home',
+  //     element: <Home />
+  //   },
+  // ]);
+  
+  const location = useLocation();
+
   return (
     <>
     {/* location fixed this conetnt on all over the route */}
@@ -23,7 +40,11 @@ function App() {
       <nav style={{textAlign: 'center'}}>
         <ul style={{display: 'flex' , justifyContent: 'space-around' }}>
           <li>
-              <Link to='/home'>Home</Link>
+            {/* Link property replace which erase the back navigation to logged in to login page*/}
+              {/* <Link to='/home'>Home</Link> */}
+              <NavLink to='/home' state='Hi'> 
+                Home 
+              </NavLink>
           </li>
           <li>
               <Link to='/books'>Books</Link>
@@ -33,18 +54,17 @@ function App() {
           </li>
         </ul>
       </nav>
+
+        {/* {element} */}
+        {JSON.stringify(location.state)}
+
       <Routes>
+
         <Route path='/' element={<Home />} />
-
-        <Route path='/books/*' element={<BookRoutes />} />
-          
-
+        <Route path='/books/*' element={<BookRoutes />} /> {/* Nested routes , router outlet used */}
         <Route path='/login' element={<Login />} />
-
         <Route path='/home' element={<Home />} />
  
-          
-
         {/* <Route path='/books' element={<BookList />} />
         <Route path='/books/:bookId' element={<Book />} />
         <Route path='/books/new' element={<NewBook />} /> */}
