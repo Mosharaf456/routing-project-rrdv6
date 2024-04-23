@@ -149,6 +149,9 @@ After this convention are followed the file automatically be available as a rout
 
 
 
+layout.tsx is the layout component that will be used to wrap all the pages in the application.
+If we delete it along with the app folder next automatically populates it, when we load root route.
+
 
 */
 
