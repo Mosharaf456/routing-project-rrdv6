@@ -7,12 +7,23 @@ function Login() {
 
     const [password, bindPassword, resetPassword] = useInput('');
 
-
+    const employee = {
+        username: "mh", //string
+        password: "1234"
+    };
     const handleSubmit = e => {
         e.preventDefault();
-        alert(`Provided Credentials ${username} ${password}`);
-        resetUsername();
-        resetPassword();
+        // alert(`Provided Credentials ${username} ${password}`);
+
+        // resetUsername();
+        // resetPassword();
+
+        if (username === employee.username && password === employee.password) {
+            console.log("Success! Logged in.");
+            
+        } else {
+            console.log("Invalid Employee ID and/or password");
+        }
     }
     return (
         <div style={{textAlign: 'center'}}>
