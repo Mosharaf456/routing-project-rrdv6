@@ -156,7 +156,7 @@ This file magically created.
 route is associated with a file based on the containing folders name. 
 within the app folder page.tsx within the about folder is associated with the /about route.
 Same as other folders and files.
-
+Note : If folder, file is not esits in the app folder then it will shows 404 not found page by next js js , didn,t need to manually worried about.
 */
 
 function Login() {
