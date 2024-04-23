@@ -97,6 +97,20 @@ Static assets ready, Image optimization, Internationalization-language changes, 
 
 SEO friendly, CSR, SSG, SSR, SEO friendly, React JS framework.
 
+
+
+NEXT JS - React Framework
+1.Offers file based route, no need third party routing packages 
+2. API routes
+3. Rendering - CSR ,SSG, SSR-- SEO friendly
+4.Data fetching - SWR, ISR
+5. Styling - CSS, SASS, CSS modules, Styled components
+6. Image optimization - next/image
+7. Dev and Prod build - next build, next start
+
+Prequisites:
+HTML, CSS, JS , ES6+ features, React fundamentals- essential as NEXT JS is a React Framework 
+
 */
 
 function Login() {
