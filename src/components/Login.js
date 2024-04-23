@@ -91,6 +91,12 @@ On react all the pages hide but specific requested pages shows but kept hide all
 NEXT JS will remove the pages which are not requested by the user but all js loaded at first.After that behaves like CSR.
 So first load take times.
 
+Feature of
+NEXT JS - Scalable, performance, Developer exprience, build in webpack , Fast Refresh,Enhance debugging exprience, Typescript built in.
+Static assets ready, Image optimization, Internationalization-language changes, Redirect/Rewrites- website update, deployment
+
+SEO friendly, CSR, SSG, SSR, SEO friendly, React JS framework.
+
 */
 
 function Login() {
