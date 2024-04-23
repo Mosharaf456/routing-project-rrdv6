@@ -20,9 +20,9 @@ function Login() {
 
         if (username === employee.username && password === employee.password) {
             console.log("Success! Logged in.");
-            
+
         } else {
-            console.log("Invalid Employee ID and/or password");
+            console.log("Invalid username or password");
         }
     }
     return (
