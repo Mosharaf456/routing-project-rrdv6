@@ -84,7 +84,7 @@ After login to the website, we can do CSR on the website.
 Before login to the website, we can do SSG on the website.
 If changes after one month on the website then we can do SSG on the website but build again.
 Continuous changes on the page then we can do SSR on the website.
-
+Then minimual level performance will drop on the website for SSR.But NEXT JS handle that well.
 
 */
 
