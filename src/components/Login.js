@@ -133,6 +133,23 @@ Client components are traditional react components that are rendered on the clie
 to make a component a client component we need to use the `useClient` hook from the `@react-ssr/shared` package.
 
 
+
+
+**********Next js Routing********
+Next js uses the file system to create routes for the application.
+- Each file in the pages directory is a route.
+URl paths that users can access in the browser are created from the file names and folders in your code base.
+Convention:
+All routes must be placed inside the app folder.
+Every file that corresponds to a route must be named page.js or page.tsx
+Each folder corresponds to a path segment in the browser URL.
+
+After this convention are followed the file automatically be available as a route.
+
+
+
+
+
 */
 
 function Login() {
