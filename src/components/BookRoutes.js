@@ -9,8 +9,11 @@ import PrivateOutlet from './PrivateOutlet/PrivateOutlet';
 function BookRoutes() {
   return (
     <>
-        <BookLayout />
+        
         <Routes>
+            <Route element={<PrivateOutlet />}> 
+              <Route index element={<BookLayout />} />
+            </Route>
             <Route element={<PrivateOutlet />}> 
                 <Route index element={<BookList />} />
                 <Route path=':bookId' element={<Book />} />
