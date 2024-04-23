@@ -75,7 +75,9 @@ NEXT JS  - complete framework of React JS.
 NEXT JS - is the best solution for SEO friendly and CSR.
 NEXT JS - CSR , SSG and SSR both three are possible.
 
-
+You can mix all CSR, SSG, SSR on the routes of the NEXT JS.
+SSG on the build time data collect and pre-rendered on the server.
+SSR on the request time data collect and pre-rendered on the server.
 
 */
 
