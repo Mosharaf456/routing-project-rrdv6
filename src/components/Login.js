@@ -86,6 +86,11 @@ If changes after one month on the website then we can do SSG on the website but 
 Continuous changes or frequently changes on the page then we can do SSR on the website.
 Then minimual level performance will drop on the website for SSR.But NEXT JS handle that well.
 
+
+On react all the pages hide but specific requested pages shows but kept hide all pages but not removed.
+NEXT JS will remove the pages which are not requested by the user but all js loaded at first.After that behaves like CSR.
+So first load take times.
+
 */
 
 function Login() {
