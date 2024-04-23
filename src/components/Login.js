@@ -1,15 +1,40 @@
 import React from 'react'
+import useInput from './CustomHooks/useInput';
+
 
 function Login() {
+    const [username, bindUsername, resetUsername] = useInput('');
 
+    const [password, bindPassword, resetPassword] = useInput('');
+
+
+    const handleClick = e => {
+        e.preventDefault();
+        console.log('e: ', e);
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        alert(`Provided Credentials ${username} ${password}`);
+        resetUsername();
+        resetPassword();
+    }
     return (
         <div style={{textAlign: 'center'}}>
             <h1>Login Page</h1>
-            <form>
-                Username: <input type="text" placeholder="Username" />
+            <form onSubmit={handleSubmit}>
+                Username: 
+                <input 
+                        {...bindUsername}
+                        type="text" 
+                    />
                 <br />
                 <br />
-                Password: <input type="password" placeholder="Password" />
+                Password: 
+                <input 
+                        {...bindPassword}
+                        type="password" 
+                    />
                 <br />
                 <br />
                 <button type="submit">Login</button>
