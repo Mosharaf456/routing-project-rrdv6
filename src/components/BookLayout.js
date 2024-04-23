@@ -14,7 +14,9 @@ function BookLayout() {
         <Link to={`/books/${number}`}>Book {number}</Link>
         <br /> 
         <Link to='/books/new'>New Book</Link>
-        <input type='text' value={number} onChange={ e => setSearchParam({n: e.target.value})} />
+        <br /> 
+        <br />
+        <input type='text' value={number} onChange={ e => setSearchParam({n: e.target.value})} placeholder='SearchParams'/>
 
         <Outlet context={{ hello: 'World' }} />
       </div>
