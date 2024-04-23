@@ -79,6 +79,13 @@ You can mix all CSR, SSG, SSR on the routes of the NEXT JS.
 SSG on the build time data collect and pre-rendered on the server.
 SSR on the request time data collect and amking pre-rendered HTML on the server then send to client.
 CSR will like that react JS.
+
+After login to the website, we can do CSR on the website.
+Before login to the website, we can do SSG on the website.
+If changes after one month on the website then we can do SSG on the website but build again.
+Continuous changes on the page then we can do SSR on the website.
+
+
 */
 
 function Login() {
