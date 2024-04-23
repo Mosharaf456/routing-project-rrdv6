@@ -8,11 +8,6 @@ function Login() {
     const [password, bindPassword, resetPassword] = useInput('');
 
 
-    const handleClick = e => {
-        e.preventDefault();
-        console.log('e: ', e);
-    }
-
     const handleSubmit = e => {
         e.preventDefault();
         alert(`Provided Credentials ${username} ${password}`);
