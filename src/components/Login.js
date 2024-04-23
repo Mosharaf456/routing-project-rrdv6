@@ -151,7 +151,11 @@ After this convention are followed the file automatically be available as a rout
 
 layout.tsx is the layout component that will be used to wrap all the pages in the application.
 If we delete it along with the app folder next automatically populates it, when we load root route.
+This file magically created. 
 
+route is associated with a file based on the containing folders name. 
+within the app folder page.tsx within the about folder is associated with the /about route.
+Same as other folders and files.
 
 */
 
