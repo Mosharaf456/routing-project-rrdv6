@@ -4,7 +4,7 @@ function Login() {
 
     return (
         <div style={{textAlign: 'center'}}>
-            <h1>Example Login Page</h1>
+            <h1>Login Page</h1>
             <form>
                 Username: <input type="text" placeholder="Username" />
                 <br />

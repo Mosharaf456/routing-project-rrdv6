@@ -1,6 +1,6 @@
 
 function useAuth() {
-    const authicated = false;
+    const authicated = true;
     return authicated;
 }
 export default useAuth;

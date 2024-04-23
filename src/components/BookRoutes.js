@@ -9,7 +9,6 @@ import PrivateOutlet from './PrivateOutlet/PrivateOutlet';
 function BookRoutes() {
   return (
     <>
-        
         <Routes>
             <Route element={<PrivateOutlet />}> 
               <Route index element={<BookLayout />} />
@@ -19,8 +18,9 @@ function BookRoutes() {
                 <Route path=':bookId' element={<Book />} />
                 <Route path='new' element={<NewBook />} />
             </Route>
-
         </Routes>
+
+        {/* <BookLayout /> */}
     </>
   )
 }
