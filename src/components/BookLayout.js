@@ -5,7 +5,7 @@ function BookLayout() {
   const [searchParam, setSearchParam] = useSearchParams({ n: 3});
   const number = searchParam.get("n");
     return (
-      <>
+      <div style={{textAlign: 'center'}}>
         <Link to='/books/1'>Book 1</Link>
         <br />
         <br />
@@ -14,9 +14,10 @@ function BookLayout() {
         <Link to={`/books/${number}`}>Book {number}</Link>
         <br /> 
         <Link to='/books/new'>New Book</Link>
-        <Outlet context={{ hello: 'World' }} />
         <input type='text' value={number} onChange={ e => setSearchParam({n: e.target.value})} />
-      </>
+
+        <Outlet context={{ hello: 'World' }} />
+      </div>
     )
 }
 

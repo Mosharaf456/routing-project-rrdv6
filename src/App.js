@@ -38,7 +38,7 @@ function App() {
     <>
     {/* location fixed this conetnt on all over the route */}
       <Routes location='/books'>
-        <Route path='/books' element={<h1>Extra Content</h1>} />
+        <Route path='/books' element={<h1 style={{textAlign: 'center'}}>Extra Content</h1>} />
       </Routes>
       <nav style={{textAlign: 'center'}}>
         <ul style={{display: 'flex' , justifyContent: 'space-around' }}>
@@ -61,8 +61,9 @@ function App() {
         </ul>
       </nav>
 
-        {/* {element} */}
+        <div style={{textAlign: 'center'}}>
          {(location.state !== null)? JSON.stringify(location.state) : ''}
+        </div>
     
 
       <Routes>

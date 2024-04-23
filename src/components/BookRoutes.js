@@ -11,16 +11,11 @@ function BookRoutes() {
     <>
         <Routes>
             <Route element={<PrivateOutlet />}> 
-              <Route index element={<BookLayout />} />
-            </Route>
-            <Route element={<PrivateOutlet />}> 
                 <Route index element={<BookList />} />
                 <Route path=':bookId' element={<Book />} />
                 <Route path='new' element={<NewBook />} />
             </Route>
         </Routes>
-
-        {/* <BookLayout /> */}
     </>
   )
 }

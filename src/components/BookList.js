@@ -1,9 +1,11 @@
 import React from 'react';
+import BookLayout from './BookLayout';
 
 function BookList() {
   return (
-    <div>
-      <h2>Book List</h2>
+    <div style={{textAlign: 'center'}}>
+      <BookLayout />
+      <h2>Book List index</h2>
     </div>
 
   )
