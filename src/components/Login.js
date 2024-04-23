@@ -111,6 +111,28 @@ NEXT JS - React Framework
 Prequisites:
 HTML, CSS, JS , ES6+ features, React fundamentals- essential as NEXT JS is a React Framework 
 
+
+
+
+
+React server components- is a new architecture introduced by React team in version 18 which was embraced by Next.js 
+
+The architecture introduces a new way of creating React components, splitting them into two parts: 
+**the server component and the client component. 
+The server component is executed on the server, while the client component is executed on the client.
+
+In next js all components are server components by default, 
+- They have the ability to fetch data from the a database and render the component on the server.
+-- However they don,t have the ability to use hooks or handle user interactions.
+***
+To create a client component it is necessary to add  useClient hook at the top of the component file. 
+unlike server components, client components can,t perform tasks like reading files but they ability to use hooks and handle user interactions.
+
+Client components are traditional react components that are rendered on the client side and have used prior version of react.
+***
+to make a component a client component we need to use the `useClient` hook from the `@react-ssr/shared` package.
+
+
 */
 
 function Login() {
