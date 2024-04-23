@@ -70,6 +70,7 @@ React package slit and merge by using yourself on your own webpack bundler is ve
 
 Recommended to do CSR by using create-react-app
 
+NEXT JS - is the best solution for SEO friendly and CSR.
 
 */
 
