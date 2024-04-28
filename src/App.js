@@ -61,9 +61,9 @@ function App() {
         </ul>
       </nav>
 
-        <div style={{textAlign: 'center'}}>
+        {/* <div style={{textAlign: 'center'}}>
          {(location.state !== null)? JSON.stringify(location.state) : ''}
-        </div>
+        </div> */}
     
 
       <Routes>
@@ -77,17 +77,18 @@ function App() {
               </PrivateRoute>
             } 
           /> */}
-        <Route path='/' element={<Home />} />
+        {/* <Route path='/' element={<Home />} /> */}
         <Route path='/home' element={<Home />} />
         <Route path='/login' element={<Login />} />
 
         <Route path='/books/*' element={<BookRoutes />} />
     
         <Route path='/*' element={<PrivateOutlet />}>
+          <Route index element={<Dashboard />} /> 
           <Route path='dashboard' element={<Dashboard />} />
         </Route>
      
-        <Route path='*' element={<NotFound />} />
+        {/* <Route path='*' element={<NotFound />} /> */}
       </Routes>
     </>
   );
